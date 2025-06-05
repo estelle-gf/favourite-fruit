@@ -21,3 +21,12 @@ input:hover {
 
 .float-container {border: 3px solid #c8f38b; padding: 20px; width: 85%; height: 100%;}
 .float-child {width: 50%; float: left; padding: 20px; box-sizing: border-box;}
+#custom_canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
