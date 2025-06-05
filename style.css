@@ -1,6 +1,6 @@
 body {background-image: url("media/fruitbackground.png");
 background-repeat: repeat;
-background-size:30%;}
+background-size:50%;}
 h1 { background-color:rgb(243, 178, 178); color:rgba(241, 125, 125, 0.937); border-radius:10px; text-align: center; border-color:rgb(243, 178, 178); border-style:dotted; border-width: 5px; padding: 10px; font-size: 2em; margin-top: 20px; margin-bottom: 20px;}
 h1:hover { border-color:rgba(241, 125, 125, 0.950); transition: border-color 0.3s, color 0.3s;}
 main {text-align: center;background-color: #f3b2b2b2; padding: 20px; border-radius: 8px; width: 90%; max-width: 1200px;}

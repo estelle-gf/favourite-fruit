@@ -23,7 +23,7 @@ function addConfetti() {
       tomato: ['🍅','🥫'],
       pineapple: ['🍍','🍹'],
     };
-
+const emojis = fruitEmojis[fruit] || [' '];
     jsConfetti.addConfetti({
       emojis: emojis
     }); }
