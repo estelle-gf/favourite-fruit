@@ -1,12 +1,67 @@
 body {background-image: url("media/fruitbackground.png");
 background-repeat: repeat;
 background-size:50%;}
-h1 { background-color:rgb(243, 178, 178); color:rgba(241, 125, 125, 0.937); border-radius:10px; text-align: center; border-color:rgb(243, 178, 178); border-style:dotted; border-width: 5px; padding: 10px; font-size: 2em; margin-top: 20px; margin-bottom: 20px;}
-h1:hover { border-color:rgba(241, 125, 125, 0.950); transition: border-color 0.3s, color 0.3s;}
-main {text-align: center;background-color: #f3b2b2b2; padding: 20px; border-radius: 8px; width: 90%; max-width: 1200px;}
-label {font-weight:bold;font-size:25px;color:rgb(244, 233, 233);text-shadow:  2px 2px 0 black, 0 0 5px rgba(0, 0, 0, 0.5);}
-select {font-size: 20px; color: rgb(241, 125, 125);background-color:rgb(249, 233, 233);border:1px solid rgb(241, 125, 125);border-radius: 20px; padding: 8px; margin: 10px;}
-input {font-size: 20px; color: rgb(241, 125, 125);background-color:rgb(249, 233, 233); border:1px solid rgb(241, 125, 125);border-radius: 20px; padding: 8px;margin: 10px;}
+header {
+  width: 800px;
+  margin: auto;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+h1 { background-color:rgb(243, 178, 178); 
+    color:rgba(241, 125, 125, 0.937);
+    border-radius:10px; 
+    text-align: center;
+     border-color:rgb(243, 178, 178); 
+     border-style:dotted;
+     border-width: 5px;
+    padding: 10px; 
+    font-size: 2em; 
+     margin-top: 20px;
+     margin-bottom: 20px;}
+h1:hover { border-color:rgba(241, 125, 125, 0.950);
+    transition: border-color 0.3s,
+    color 0.3s;}
+main {margin:auto;
+    text-align: center;
+    background-color: #f3b2b2b2; 
+    padding: 20px; 
+    border-radius: 8px; 
+    width: 725px; 
+    height:20%; 
+    }
+ .mainClick {animation: growDown 1s forwards;
+}
+ @keyframes growDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 400px; 
+  }
+}
+label {font-weight:bold;
+    font-size:25px;
+    color:rgb(244, 233, 233);
+    text-shadow:  2px 2px 0 black, 0 0 5px rgba(0, 0, 0, 0.5);}
+select {font-size: 20px; 
+    color: rgb(241, 125, 125);
+    background-color:rgb(249, 233, 233);
+    border:1px solid rgb(241, 125, 125);
+    border-radius: 20px; 
+    padding: 8px; margin: 10px;}
+input {font-size: 20px; color: rgb(241, 125, 125);
+    background-color:rgb(249, 233, 233); 
+    border:1px solid rgb(241, 125, 125);
+    border-radius: 20px; 
+    padding: 8px;
+    margin: 10px;}
 input:hover {
   animation: tilt-n-move-shaking 0.25s infinite;
   cursor:progress;
@@ -20,8 +75,17 @@ input:hover {
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-.float-container {border: 3px solid #c8f38b; padding: 20px; width: 85%; height: 100%;}
-.float-child {width: 50%; float: left; padding: 20px; box-sizing: border-box;}
+.float-container {border: 3px solid #c8f38b;
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    height: 50%;}
+.float-child {width: 50%;
+    height: 300px;
+    float: left; 
+    padding: 20px; 
+    box-sizing: 
+    border-box;}
 #custom_canvas {
   position: fixed;
   pointer-events: none;
@@ -40,3 +104,6 @@ input:hover {
   padding: 0px;
   
   text-align:right;}
+  .hidden {
+    display: none;
+  }
