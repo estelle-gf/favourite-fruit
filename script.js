@@ -27,11 +27,14 @@ const emojis = fruitEmojis[fruit] || [' '];
     jsConfetti.addConfetti({
       emojis: emojis
     }); }
+    function showContainer(event) {
+        let containerElement = document.querySelector("#float-container");
+        containerElement.classList.remove("hidden");
+    }
     function showMore(event) {
         let mainElemet = document.querySelector("#main");
         mainElemet.classList.add("mainClick"); 
-    let containerElement = document.querySelector("#float-container");
-    containerElement.classList.remove("hidden");}
+   setTimeout(showContainer, 1555);}
 
 let fruitSelect = document.querySelector("#fruit");
 fruitSelect.addEventListener("change", addConfetti);

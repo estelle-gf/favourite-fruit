@@ -64,6 +64,7 @@ input {font-size: 20px; color: rgb(241, 125, 125);
     margin: 10px;}
 input:hover {
   animation: tilt-n-move-shaking 0.25s;
+  animation-iteration-count: 3;
   cursor:progress;
 }
   
@@ -75,7 +76,9 @@ input:hover {
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-.float-container {border: 3px solid #c8f38b;
+.float-container {border: 3px solid #f1d4d4;
+    border-radius: 10px;
+    background-color: #f3b2b2b2; 
     padding: 20px;
     margin: auto;
     width: 90%;
@@ -95,6 +98,8 @@ input:hover {
   height: 100%;
   z-index: 9999;
 }
+.fun-fact {background-color: #f4cfcfb2; }
+.growing-tips {background-color: #f4cfcfb2; }
 .click-me {
   font-size: 20px;
   font-weight:bold;
