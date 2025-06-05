@@ -24,7 +24,6 @@ function addConfetti() {
       pineapple: ['🍍','🍹'],
     };
 
-    const emojis = fruitEmojis[fruit] || ['🎉']; // Default fallback
     jsConfetti.addConfetti({
       emojis: emojis
     }); }
