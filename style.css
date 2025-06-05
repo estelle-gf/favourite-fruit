@@ -63,7 +63,7 @@ input {font-size: 20px; color: rgb(241, 125, 125);
     padding: 8px;
     margin: 10px;}
 input:hover {
-  animation: tilt-n-move-shaking 0.25s infinite;
+  animation: tilt-n-move-shaking 0.25s;
   cursor:progress;
 }
   
