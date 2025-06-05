@@ -1,2 +1,23 @@
-.float-container {border: 3px solid #73AD21; padding: 20px; width: 100%; height: 100%;}
+body {background-image: url("media/fruitbackground.png");
+background-repeat: repeat;
+background-size:30%;}
+h1 { background-color:rgb(243, 178, 178); color:rgba(241, 125, 125, 0.937); border-radius:10px; text-align: center; border-color:rgb(243, 178, 178); border-style:dotted; border-width: 5px; padding: 10px; font-size: 2em; margin-top: 20px; margin-bottom: 20px;}
+h1:hover { border-color:rgba(241, 125, 125, 0.937); transition: border-color 0.3s, color 0.3s;}
+main {text-align: center;background-color: #f3b2b2b2; padding: 20px; border-radius: 8px; width: 90%; max-width: 1200px;}
+label {font-size:25px;color:rgb(244, 233, 233);text-shadow:  2px 2px 0 black, 0 0 5px rgba(0, 0, 0, 0.5);}
+select {font-size: 20px; color: rgb(241, 125, 125);background-color:rgb(249, 233, 233);border:1px solid rgb(241, 125, 125);border-radius: 20px; padding: 8px; margin: 10px;}
+input {font-size: 20px; color: rgb(241, 125, 125);background-color:rgb(249, 233, 233); border:1px solid rgb(241, 125, 125);border-radius: 20px; padding: 8px;margin: 10px;}
+input:hover {
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+  
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.float-container {border: 3px solid #c8f38b; padding: 20px; width: 85%; height: 100%;}
 .float-child {width: 50%; float: left; padding: 20px; box-sizing: border-box;}

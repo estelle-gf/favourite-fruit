@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Fruit-fetti</title>
 </head>
 <body>
     <header> <h1>Pick a fruit</h1></header>
     <main> <label>Please select your favourite fruit out of the ones below</label>
+        <br/>
     <select name="fruit" id="fruit">
-        <option value="greenApple">Granny Smith Apple 🍏 </option>
+        <option value="">feeling fruity? pick one </option>
+       <option value="greenApple">Granny Smith Apple 🍏 </option>
          <option value="redApple">Honeycrisp Apple 🍎 </option>
         <option value="banana">Banana 🍌</option>
         <option value="cherry">Cherry 🍒</option>
-        <option value="grapes">Grapes 🍇</option>
+        <option  value="grapes">Grapes 🍇</option>
         <option value="watermelon">Watermelon 🍉</option>
         <option value="lemon">Lemon 🍋</option>
         <option value="lime">Lime 🍋‍🟩</option>
         <option value="honeydew">Honeydew 🍈</option> 
         <option value="mango"> Mango 🥭</option> 
-        <option value="blueberry">Blueberry 🫐</option>  
-        <option value="peach">Peach 🍑</option>  
-        <option value="strawberry">Strawberry 🍓</option> 
-        <option value="kiwi">Kiwi 🥝</option> 
-        <option value="pear"> Pear 🍐</option> 
-        <option value="tomato"> Tomato</option> 🍅</option>  
-        <option value="pineapple">Pineapple 🍍</option>
-
+        <option  value="blueberry">Blueberry 🫐</option>  
+        <option value="orange">Orange 🍊</option>
+        <option  value="peach">Peach 🍑</option>  
+        <option  value="strawberry">Strawberry 🍓</option> 
+        <option  value="kiwi">Kiwi 🥝</option> 
+        <option  value="pear"> Pear 🍐</option> 
+        <option  value="tomato"> Tomato</option> 🍅</option>  
+        <option  value="pineapple">Pineapple 🍍</option>
+        </select>
+        <input type="submit" id="submit" value="Let's go!">
+<br/>
         <div class="float-container">
-        <div class="float-child-facts" id="fun-fact">
+        <div class="float-child" id="fun-fact">
             <h2> Column one for fruit facts  </h2>
         </div>
-         <div class="float-child-advice" id="grow">   
+         <div class="float-child" id="grow">   
 <h2> Column 2 for growing advice </h2>
          </div>
            </div> 
               
-    </select></main>
+    </main>
    <footer> This project has been coded by Estelle </footer>
    <script src="script.js"></script>
 </body>
