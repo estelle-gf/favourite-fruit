@@ -36,7 +36,7 @@ const emojis = fruitEmojis[fruit] || [' '];
         mainElement.classList.add("mainClick"); 
    }
 
-function displayFacts(response) {new Typewriter("#fun-facts", {
+function displayFacts(response) {new Typewriter("#fun-fact", {
   strings: response.data.answer,
   autoStart: true,
   delay: 1,
@@ -55,32 +55,34 @@ function displayTips(response) {
 }
 function generateFactsAndTips(event) {
     event.preventDefault();
-    let fruit = document.querySelector("#fruit").value; 
+    let fruit = document.querySelector("#fruit");
+let fruitName = fruit.options[fruit.selectedIndex].text;
 showContainer();
-let funFactsElement = document.querySelector("#fun-facts");
-funFactsElement.innerHTML = `<div class="generating"> ⏳ Getting your fun fact about ${fruit}... </div>`;
+let funFactsElement = document.querySelector("#fun-fact");
+funFactsElement.innerHTML = `<div class="generating"> ⏳ Getting your fun fact about ${fruitName}... </div>`;
 let growingTipsElement = document.querySelector("#growing-tips");
-growingTipsElement.innerHTML = `<div class="generating"> ⏳ Getting your growing advice for ${fruit}... </div>`;
+growingTipsElement.innerHTML = `<div class="generating"> ⏳ Getting your growing advice for ${fruitName}... </div>`;
 
 let apiKey = "2a99380b94355b9foa25076te09bd049";
-let context = "You are an expert in horticulture, you are passionate about giving advice. Please always follow the User instructions and sign off with -Shecodes AI in the same font size as the text.";
-let prompt = `User instructions: Generate a fruity fun fact about ${fruit}. 
-Write on separate lines, format in basic HTML  but with no code tags. 
-Be polite, keep the response short. No more than 2 lines for the fun fact and 3 for the growing advice.`;
-let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+let context = "You are an expert in horticulture, you are passionate about giving advice. Keep it short. Please always follow the User instructions and sign off with -Shecodes AI in the same font size as the text. Write on separate lines, format in basic HTML  but with no code tags. ";
+let promptOneFact = `User instructions: Generate a fruity fun fact about ${fruitName}. No More that 6 lines of text`
+let promptTwoTip = `User instructions: Generate some tips and advice to grow ${fruitName} successfully. Keep it short, no More that 4 lines of text`
+
+let apiUrlOne = `https://api.shecodes.io/ai/v1/generate?prompt=${promptOneFact}&context=${context}&key=${apiKey}`;
+let apiUrlTwo = `https://api.shecodes.io/ai/v1/generate?prompt=${promptTwoTip}&context=${context}&key=${apiKey}`;
 
 
-axios.get(apiUrl)
+axios.get(apiUrlOne)
   .then(response => {
-    displayFacts(response);
-    return response;
+    displayFacts(response); 
+    return axios.get(apiUrlTwo); 
   })
   .then(response => {
-    displayTips(response);
+    displayTips(response); 
   })
   .catch(error => {
     console.error("API request failed:", error);
-    document.querySelector("#fun-facts").innerHTML = "❌ Could not load fun fact.";
+    document.querySelector("#fun-fact").innerHTML = "❌ Could not load fun fact.";
     document.querySelector("#growing-tips").innerHTML = "Please try again.";
   }); }
 
