@@ -76,7 +76,7 @@ input:hover {
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 footer { background-color:rgb(243, 178, 178); 
-    color:rgba(241, 125, 125, 0.937);
+    color:rgba(167, 38, 38, 0.937);
     border-radius:5px; 
     text-align: center;
      border-color:rgb(243, 178, 178); 
