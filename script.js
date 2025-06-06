@@ -30,6 +30,8 @@ const emojis = fruitEmojis[fruit] || [' '];
     function showContainer(event) {
         let containerElement = document.querySelector("#float-container");
         containerElement.classList.remove("hidden");
+        let footerElement = document.querySelector("footer");
+        footerElement.classList.add("hidden");
     }
     function showMore(event) {
         let mainElement = document.querySelector("#main");
