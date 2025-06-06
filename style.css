@@ -75,7 +75,19 @@ input:hover {
   75% { transform: translate(-5px, 5px) rotate(-5deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }
-
+footer { background-color:rgb(243, 178, 178); 
+    color:rgba(241, 125, 125, 0.937);
+    border-radius:5px; 
+    text-align: center;
+     border-color:rgb(243, 178, 178); 
+     border-style:dotted;
+     border-width: 1px;
+    padding: 5px; 
+    font-size: 10px;
+    width:725px; 
+    margin:auto;
+    margin-top: 20px;
+}
 .float-container {border: 3px solid #f1d4d4;
     border-radius: 10px;
     background-color: #f3b2b2b2; 
