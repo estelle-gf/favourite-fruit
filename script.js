@@ -64,9 +64,9 @@ let growingTipsElement = document.querySelector("#growing-tips");
 growingTipsElement.innerHTML = `<div class="generating"> ⏳ Getting your growing advice for ${fruitName}... </div>`;
 
 let apiKey = "2a99380b94355b9foa25076te09bd049";
-let context = "You are an expert in horticulture, you are passionate about giving advice. Keep it short. Please always follow the User instructions and sign off with -Shecodes AI in the same font size as the text. Write on separate lines, format in basic HTML  but with no code tags. ";
-let promptOneFact = `User instructions: Generate a fruity fun fact about ${fruitName}. No More that 6 lines of text`
-let promptTwoTip = `User instructions: Generate some tips and advice to grow ${fruitName} successfully. Keep it short, no More that 4 lines of text`
+let context = "You are an expert in horticulture, you are passionate about giving advice. Keep it short. Please always follow the User instructions and sign off with -Shecodes AI, on a separate line, in the same font size as the text. Write on separate lines, with 0.5 cm spacing and format in basic HTML  but with no code tags. ";
+let promptOneFact = `User instructions: Generate a short hilarious funny fact about ${fruitName}.For example knock knock jokes or a pun. No More that 4 lines of text`
+let promptTwoTip = `User instructions: Generate some advice to grow ${fruitName} successfully. e.g how much water, light, what type of soild or climate works best Keep it short, no More that 4 lines of text`
 
 let apiUrlOne = `https://api.shecodes.io/ai/v1/generate?prompt=${promptOneFact}&context=${context}&key=${apiKey}`;
 let apiUrlTwo = `https://api.shecodes.io/ai/v1/generate?prompt=${promptTwoTip}&context=${context}&key=${apiKey}`;
